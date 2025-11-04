@@ -31,26 +31,7 @@ This dataset provides an opportunity to build a pipeline that can demonstrate th
 
 ## 🧩 Logical Architecture (with AWS Integration)
 
-flowchart TD
-    A[External Sources\nKaggle Dataset, Weather & Currency APIs] -->|Extract via Python/Kaggle API| B[S3 Bucket\nRaw Zone]
-    B -->|Metadata & Tracking| C[DynamoDB\nMetadata Store]
-    B -->|Trigger ETL Job| D[AWS Glue or PySpark\nTransformation Layer]
-    D -->|Clean, Join, Enrich| E[S3 Bucket\nProcessed Zone]
-    E -->|Load Curated Data| F[AWS RDS\nPostgreSQL Warehouse]
-    F -->|Queried by| G[Apache Airflow\nAmazon MWAA]
-    G -->|Schedules, Monitors| D
-    G -->|Feeds Results| H[Streamlit Dashboard\nEC2 or AppRunner]
-    H -->|Visualizes KPIs| I[End Users / Analysts]
-    C -.-> D
-    subgraph AWS_Cloud
-        B
-        C
-        D
-        E
-        F
-        G
-        H
-    end
+
 
 ## 🪜 Workflow & Learning Objectives-Planned
 
@@ -71,8 +52,8 @@ flowchart TD
 |-------|-------|
 | **Compute** | PySpark (Glue) / Polars |
 | **Storage & Warehouse** | AWS S3 (Data Lake), AWS RDS (PostgreSQL) |
-| **Ingestion** | Kaggle API, Requests, boto3 |
-| **Orchestration** | Apache Airflow (Amazon MWAA) |
+| **Ingestion** | Kaggle API |
+| **Orchestration** | Apache Airflow |
 | **Testing** | Great Expectations, Pytest |
 | **Containerization** | Docker, Docker Compose |
 | **CI/CD** | GitHub Actions + AWS ECS |
@@ -107,35 +88,34 @@ flowchart TD
 | **Drop 7** | **Dec 5** | Final polish + dry run | Complete repo, video rehearsal, README finalization |
 | **Submission** | **Dec 6** | Final delivery | Code + Docs + Video walkthrough |
 
-All deliverables will be merged to `main` via reviewed pull requests with active commits twice a week from each member.
+All deliverables will be merged into `main` via reviewed pull requests, with active commits from each member twice a week.
 
 ## 🧱 Development Best Practices to be followed
 
 - **Branching:** Feature branches → Pull Request → Review → Merge  
 - **Code Quality:** Black formatter + Pylint + docstrings  
-- **Secrets:** Managed via AWS Secrets Manager, never hardcoded  
 - **Testing:** Pytest + Great Expectations integrated into CI/CD  
-- **Observability:** Airflow and CloudWatch monitoring, task-level logs  
+- **Observability:** Airflow monitoring, task-level logs  
 - **Documentation:** Updated Markdown/Quarto after every drop  
 - **Team Workflow:** Asynchronous commits; synchronous check-ins every drop day  
-- **Peer Review:** Every merge request requires one documented reviewer approval
+- **Peer Review:** Every merge request requires one documented reviewer's approval
 
 ## 📦 Planned Deliverables
 
 | Category | Deliverable | Description |
 |-----------|--------------|-------------|
 | **Repository** | Complete GitHub repo | Code, docs, notebooks, tests, Docker, CI/CD |
-| **Cloud Deployment** | AWS-hosted pipeline | S3 + Glue + RDS + MWAA + EC2 integration |
+| **Cloud Deployment** | AWS-hosted pipeline | S3 + Glue + RDS + EC2 integration |
 | **Transformation Layer** | Polars / PySpark ETL | Data cleaning, joins, enrichments, metrics |
-| **Analytics & Dashboard** | Streamlit app | Real-time KPIs, trend visuals, regression |
-| **Testing & CI/CD** | Automated validation | Great Expectations + GitHub Actions |
+| **Analytics & Dashboard** | Streamlit app | Predefined KPIs and charts |
+| **Testing & CI/CD** | Automated validation | GitHub Actions |
 | **Documentation** | PDF, diagrams, video | README, architecture, walkthrough demo |
 
 ## ⚠️ Risks and Contingencies
 
 | Risk | Impact | Mitigation |
 |------|---------|-------------|
-| **AWS credential or quota limits** | Delayed deployment | Local MinIO + PostgreSQL mirror |
+| **AWS credential or quota limits** | Delayed deployment | PostgreSQL mirror |
 | **Glue or RDS compute limits** | ETL job failure or cost spikes | Process subset data locally, scale on need |
 | **Scheduling conflicts** | Progress slippage | Dual ownership per module, fixed drop cadence |
 | **Airflow DAG failures** | Pipeline disruption | Local Airflow container fallback |
