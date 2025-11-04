@@ -44,7 +44,7 @@ flowchart TD
     A -. optional enrich .-> D
     H -. triggers .-> G
 
-    subgraph AWS_Cloud [AWS Cloud]
+    subgraph AWS_Cloud
         B
         C
         D
@@ -53,6 +53,7 @@ flowchart TD
         G
         J
     end
+
 
 
 
