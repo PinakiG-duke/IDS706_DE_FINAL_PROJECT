@@ -19,10 +19,10 @@ It was selected because:
 
 - **Rich relational structure:** multiple linked tables across orders, customers, products, and logistics.
 - **Realistic business process flow:** mirrors the operational data in real e-commerce pipelines.
-- **Multi-domain scope:** enables demonstration of ingestion, transformation, analytics, and visualization within one integrated ecosystem.
-- **Open, reproducible data:** no API keys or privacy restrictions — ideal for student projects and automation.
+- **Complete pipeline scope:** enables components for ingestion, transformation, analytics, and visualization within one integrated ecosystem.
+- **Open, reproducible data:** no API keys or privacy restrictions - data masked by source to avoid any PII handling
 
-This dataset provides a controlled, yet sufficiently complex environment to demonstrate the entire data engineering lifecycle.
+This dataset provides an opportunity to build a pipeline that can demonstrate the entire data engineering lifecycle as well as be applicable for a lightweight production setup
 
 ## Schema of the Dataset
 
@@ -34,16 +34,14 @@ This dataset provides a controlled, yet sufficiently complex environment to demo
 flowchart TD
     A[External Sources\nKaggle Dataset, Weather & Currency APIs] -->|Extract via Python/Kaggle API| B[S3 Bucket\nRaw Zone]
     B -->|Metadata & Tracking| C[DynamoDB\nMetadata Store]
-    B -->|Trigger ETL Job| D[AWS Glue / PySpark\nTransformation Layer]
+    B -->|Trigger ETL Job| D[AWS Glue or PySpark\nTransformation Layer]
     D -->|Clean, Join, Enrich| E[S3 Bucket\nProcessed Zone]
     E -->|Load Curated Data| F[AWS RDS\nPostgreSQL Warehouse]
-    G[Apache Airflow\nAmazon MWAA] -->|Orchestrate Tasks & Logs| F
-    H[GitHub Actions\nCI/CD Pipeline] -->|Build/Test/Deploy| I[Docker Containers\nECS or Local Compose]
-    F -->|Live Connection| J[Streamlit Dashboard\nEC2 or AppRunner]
-    J -->|Visualization & KPIs| K[End Users / Analysts]
-    A -. optional enrich .-> D
-    H -. triggers .-> G
-
+    F -->|Queried by| G[Apache Airflow\nAmazon MWAA]
+    G -->|Schedules, Monitors| D
+    G -->|Feeds Results| H[Streamlit Dashboard\nEC2 or AppRunner]
+    H -->|Visualizes KPIs| I[End Users / Analysts]
+    C -.-> D
     subgraph AWS_Cloud
         B
         C
@@ -51,11 +49,8 @@ flowchart TD
         E
         F
         G
-        J
+        H
     end
-
-
-
 
 ## 🪜 Workflow & Learning Objectives-Planned
 
