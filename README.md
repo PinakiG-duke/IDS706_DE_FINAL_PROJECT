@@ -10,7 +10,7 @@
 This project designs and implements a **cloud-ready data engineering pipeline** using the [Olist Brazilian E-Commerce Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).  
 It replicates a real-world enterprise analytics platform — automating data ingestion, transformation, and analysis — to produce reproducible, scalable insights about e-commerce operations, customer satisfaction, and logistics performance.
 
-The final solution will combine **AWS cloud services, containerization, orchestration, and CI/CD automation** to demonstrate practical mastery of modern data engineering workflows.
+The final solution will combine **AWS cloud services, containerization, orchestration, and CI/CD automation** to demonstrate practical components of modern data engineering workflows.
 
 ## 🎯 Why This Dataset
 
@@ -31,7 +31,39 @@ This dataset provides a controlled, yet sufficiently complex environment to demo
 
 ## 🧩 Logical Architecture (with AWS Integration)
 
-To be developed
+```mermaid
+flowchart TD
+    A[External Sources<br/>(Kaggle Dataset,<br/>Weather & Currency APIs)] -->|Extract via Python/Kaggle API| B[S3 Bucket<br/>(Raw Zone)]
+    B -->|Metadata & Tracking| C[DynamoDB<br/>(Metadata Store)]
+    B -->|Trigger ETL Job| D[AWS Glue / PySpark<br/>(Transformation Layer)]
+    D -->|Clean, Join, Enrich| E[S3 Bucket<br/>(Processed Zone)]
+    E -->|Load Curated Data| F[AWS RDS<br/>(PostgreSQL Warehouse)]
+    F -->|Query & Analyze| G[Apache Airflow<br/>(Amazon MWAA)]
+    G -->|Orchestrate Tasks & Logs| H[GitHub Actions<br/>(CI/CD Pipeline)]
+    H -->|Build/Test/Deploy| I[Docker Containers<br/>(ECS/Local Compose)]
+    F -->|Live Connection| J[Streamlit Dashboard<br/>(EC2 / AppRunner)]
+    J -->|Visualization & KPIs| K[End Users / Analysts]
+
+    subgraph AWS_Cloud [AWS Cloud]
+        B
+        C
+        D
+        E
+        F
+        G
+        J
+    end
+
+    style A fill:#f2f2f2,stroke:#666,stroke-width:1px
+    style B fill:#eaf4fe,stroke:#0073bb,stroke-width:1.5px
+    style D fill:#e1f5e4,stroke:#3fa34d,stroke-width:1.5px
+    style F fill:#fef7e0,stroke:#c48f00,stroke-width:1.5px
+    style G fill:#f3e8ff,stroke:#7e57c2,stroke-width:1.5px
+    style H fill:#e3f2fd,stroke:#0277bd,stroke-width:1.5px
+    style I fill:#fce4ec,stroke:#c2185b,stroke-width:1.5px
+    style J fill:#fff3e0,stroke:#ef6c00,stroke-width:1.5px
+    style K fill:#eeeeee,stroke:#333,stroke-width:1px
+
 
 ## 🪜 Workflow & Learning Objectives-Planned
 
