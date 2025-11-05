@@ -56,9 +56,9 @@ This dataset provides an opportunity to build a pipeline that can demonstrate th
 | **Orchestration** | Apache Airflow |
 | **Testing** | Great Expectations, Pytest |
 | **Containerization** | Docker, Docker Compose |
-| **CI/CD** | GitHub Actions + AWS ECS |
-| **Visualization** | Streamlit (EC2/AppRunner) |
-| **Documentation** | Markdown, Quarto / Overleaf |
+| **CI/CD** | GitHub Actions |
+| **Visualization** | Streamlit  |
+| **Documentation** | Markdown |
 
 
 ## 🔁 Reproducibility & Scalability
