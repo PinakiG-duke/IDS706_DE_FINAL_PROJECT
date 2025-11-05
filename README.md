@@ -245,7 +245,7 @@ Each team member contributes across the data pipeline, with ownership distribute
 | **Data Transformation & Modeling** | Implement transformation logic using Polars or PySpark. Perform joins, aggregations, and feature engineering. Create regression-ready analytical tables. | ETL scripts, transformation notebooks, derived metrics. |
 | **Testing & CI/CD Automation** | Build and maintain testing and validation layers. Implement Great Expectations for data quality and GitHub Actions for automated testing and container builds. | Pytest and validation suite, CI/CD pipelines. |
 | **Analytics & Visualization** | Design SQL queries and regression models for insights. Build a Streamlit dashboard showcasing KPIs and analysis outcomes. | Analytical notebooks, queries, Streamlit dashboard. |
-| **Documentation & Version Control** | Maintain clear documentation, environment reproducibility, and version control discipline. Ensure alignment with the project rubric and reproducibility. | README, environment files, Quarto/Overleaf documentation. |
+| **Documentation & Version Control** | Maintain clear documentation, environment reproducibility, and version control discipline. Ensure alignment with the project rubric and reproducibility. | README, environment files, Documentation. |
 
 **Collaboration Model**
 - **Twice-weekly commits** aligned with project “drop” plan.  
