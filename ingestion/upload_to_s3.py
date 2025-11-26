@@ -28,9 +28,9 @@ def upload_directory_to_s3(local_dir: str, bucket: str, s3_prefix: str = ""):
         print(f"\nUploading {local_path} → s3://{bucket}/{s3_key}")
         try:
             s3.upload_file(local_path, bucket, s3_key)
-            print("  ✅ Success")
+            print(" Success")
         except ClientError as e:
-            print("  ❌ Failed:", e)
+            print(" Failed:", e)
 
 
 if __name__ == "__main__":
