@@ -42,7 +42,7 @@ An end-to-end data engineering pipeline processing **Brazilian E-Commerce (Olist
 ### Business Value
 
 This pipeline enables:
-- 📊 **Revenue analysis** by geography and product category
+- 📊 **Revenue analysis** By geography and product category
 - 📈 **Customer behavior insights** and repeat purchase analysis  
 - ⏱️ **Delivery performance** optimization with statistical modeling
 - ⭐ **Product recommendations** based on ratings and sales patterns
