@@ -63,7 +63,7 @@ This pipeline enables:
 
 ---
 
-## 🏛️ Architecture
+##  Architecture
 
 ### High-Level System Design
 
@@ -144,7 +144,7 @@ flowchart LR
 
 ---
 
-## 💾 Data Sources & Storage
+##  Data Sources & Storage
 
 ### Data Source
 
@@ -336,12 +336,12 @@ LOAD_ORDER = [
 | `test_connections.py` | Connection validator | S3 + PostgreSQL health checks |
 
 **Features**:
-- ✅ Idempotent operations
-- ✅ Smart incremental updates (skips unchanged data)
-- ✅ Foreign key constraint handling
-- ✅ Duplicate detection with `ON CONFLICT DO NOTHING`
-- ✅ NaN → NULL conversion
-- ✅ Progress tracking for large tables
+- Idempotent operations
+- Smart incremental updates (skips unchanged data)
+- Foreign key constraint handling
+- Duplicate detection with `ON CONFLICT DO NOTHING`
+- NaN → NULL conversion
+- Progress tracking for large tables
 
 ### 2. Data Transformation & Analysis
 
@@ -366,9 +366,9 @@ LOAD_ORDER = [
    - Output: `category_performance.csv`
 
 **Why Polars?**
-- 🚀 10-100x faster than Pandas for large datasets
-- 📊 Lazy evaluation for memory efficiency
-- 🔗 SQL-like syntax for familiar operations
+-  10-100x faster than Pandas for large datasets
+-  Lazy evaluation for memory efficiency
+-  SQL-like syntax for familiar operations
 
 ### 3. Data Querying
 
@@ -391,11 +391,11 @@ LOAD_ORDER = [
 **Location**: `orchestration/orchestration_airflow.py`
 
 **Airflow DAG Features**:
-- 📅 Scheduled daily runs
-- 🔄 Task dependencies (download → upload → schema → load → transform → test)
-- ⚠️ Email alerts on failure
-- 🔁 Retry logic (2 attempts, 5-min delay)
-- ⏱️ SLA monitoring
+-  Scheduled daily runs
+-  Task dependencies (download → upload → schema → load → transform → test)
+-  Email alerts on failure
+-  Retry logic (2 attempts, 5-min delay)
+-  SLA monitoring
 
 **Task Graph**:
 
@@ -433,12 +433,12 @@ graph TD
 - Required table verification
 
 #### Data Quality Tests (`test_data_quality.py`)
-- ✅ Row count validation (all tables have data)
-- ✅ NULL value checks (critical columns)
-- ✅ Foreign key integrity
-- ✅ Data range validation (prices positive, scores 1-5)
-- ✅ Duplicate detection
-- ✅ Date consistency (delivery after purchase)
+-  Row count validation (all tables have data)
+-  NULL value checks (critical columns)
+-  Foreign key integrity
+-  Data range validation (prices positive, scores 1-5)
+-  Duplicate detection
+-  Date consistency (delivery after purchase)
 
 **Run tests**:
 ```bash
@@ -522,12 +522,12 @@ docker-compose down
 
 | Page | Features | Key Metrics |
 |------|----------|-------------|
-| **📈 Overview** | KPIs, trends | Total orders, revenue, AOV, customers |
-| **🌍 Geographic** | Maps, treemaps | State/city revenue distribution |
-| **📦 Products** | Scatter plots | Price vs satisfaction, payment methods |
-| **🚚 Delivery** | Performance metrics | Delivery times, late delivery impact |
-| **📊 Statistics** | Regression analysis | R², p-value, correlation |
-| **✅ Quality** | Validation checks | Row counts, NULL checks, ranges |
+| ** Overview** | KPIs, trends | Total orders, revenue, AOV, customers |
+| ** Geographic** | Maps, treemaps | State/city revenue distribution |
+| ** Products** | Scatter plots | Price vs satisfaction, payment methods |
+| ** Delivery** | Performance metrics | Delivery times, late delivery impact |
+| ** Statistics** | Regression analysis | R², p-value, correlation |
+| ** Quality** | Validation checks | Row counts, NULL checks, ranges |
 
 **Technical Stack**:
 - Framework: Streamlit 1.29.0
@@ -604,7 +604,7 @@ graph LR
 
 ---
 
-## 🚀 Setup Instructions
+##  Setup Instructions
 
 ### Prerequisites
 
@@ -724,9 +724,9 @@ python transformation/analyze_with_polars.py
 python tests/test_data_quality.py
 ```
 
-### Run Web Dashboard 🌐
+### Run Web Dashboard 
 
-🌐 **Live Dashboard**: [https://dataplumbers.streamlit.app](https://dataplumbers.streamlit.app)
+**Live Dashboard**: [https://dataplumbers.streamlit.app](https://dataplumbers.streamlit.app)
 
 Interactive analytics dashboard with real-time PostgreSQL queries, featuring 6 pages of visualizations and insights.
 
@@ -755,12 +755,12 @@ graph TD
     B -->|Cache| E[st.cache_data<br/>10 min TTL]
     
     subgraph "Dashboard Pages"
-        F[📈 Overview<br/>KPIs & Trends]
-        G[🌍 Geographic<br/>Maps & States]
-        H[📦 Products<br/>Categories & Ratings]
-        I[🚚 Delivery<br/>Performance Analysis]
-        J[📊 Statistics<br/>Regression Models]
-        K[✅ Quality<br/>Data Validation]
+        F[ Overview<br/>KPIs & Trends]
+        G[ Geographic<br/>Maps & States]
+        H[ Products<br/>Categories & Ratings]
+        I[ Delivery<br/>Performance Analysis]
+        J[ Statistics<br/>Regression Models]
+        K[ Quality<br/>Data Validation]
     end
     
     B --> F
@@ -777,12 +777,12 @@ graph TD
 ```
 
 **Dashboard Features**:
-- 📈 **Overview**: KPIs, revenue trends, top categories/states
-- 🌍 **Geographic Analysis**: Interactive maps, city insights
-- 📦 **Product Insights**: Price vs satisfaction, payment methods
-- 🚚 **Delivery Performance**: Delivery times, late delivery impact
-- 📊 **Statistical Analysis**: Linear regression with visualization
-- ✅ **Data Quality**: Table stats, validation checks
+-  **Overview**: KPIs, revenue trends, top categories/states
+-  **Geographic Analysis**: Interactive maps, city insights
+-  **Product Insights**: Price vs satisfaction, payment methods
+-  **Delivery Performance**: Delivery times, late delivery impact
+-  **Statistical Analysis**: Linear regression with visualization
+-  **Data Quality**: Table stats, validation checks
 
 ### Run with Docker Compose
 
@@ -810,7 +810,7 @@ psql -h <DB_HOST> -p <DB_PORT> -U <DB_USER> -d <DB_NAME>
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 ### Testing Strategy
 
@@ -1217,13 +1217,13 @@ sslmode='require'
 
 ---
 
-## 📝 License
+##  License
 
 MIT License - See [LICENSE](LICENSE) file
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **Olist**: For providing the dataset
 - **Kaggle**: For hosting the data
@@ -1239,6 +1239,3 @@ For questions or collaboration:
 - **GitHub**: [PinakiG-duke](https://github.com/PinakiG-duke)
 - **Email**: pg163@duke.edu
 
----
-
-**Built with ❤️ by Team IDS706**
