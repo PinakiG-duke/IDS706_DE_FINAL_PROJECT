@@ -15,7 +15,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Project Overview](#project-overview)
 - [Team Members & Roles](#team-members--roles)
@@ -30,7 +30,7 @@
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 
 An end-to-end data engineering pipeline processing **Brazilian E-Commerce (Olist) dataset** with:
 
@@ -42,11 +42,11 @@ An end-to-end data engineering pipeline processing **Brazilian E-Commerce (Olist
 ### Business Value
 
 This pipeline enables:
-- 📊 **Revenue analysis** By geography and product category
-- 📈 **Customer behavior insights** and repeat purchase analysis  
-- ⏱️ **Delivery performance** optimization with statistical modeling
-- ⭐ **Product recommendations** based on ratings and sales patterns
-- 💰 **Payment trend analysis** across multiple methods
+-  **Revenue analysis** By geography and product category
+-  **Customer behavior insights** and repeat purchase analysis  
+-  **Delivery performance** optimization with statistical modeling
+-  **Product recommendations** based on ratings and sales patterns
+-  **Payment trend analysis** across multiple methods
 
 ---
 
