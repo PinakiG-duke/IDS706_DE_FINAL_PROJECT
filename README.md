@@ -354,7 +354,7 @@ LOAD_ORDER = [
    - Metrics: Total revenue, order count, avg order value
    - Output: `revenue_by_state.csv`
 
-2. **Delivery Performance (Regression Analysis)** ⭐
+2. **Delivery Performance (Regression Analysis)** 
    - Model: `review_score = β₀ + β₁ * delivery_days`
    - Statistical test: Linear regression with scipy
    - Metrics: R², p-value, correlation coefficient
@@ -858,15 +858,6 @@ open htmlcov/index.html  # View coverage report
 python tests/test_data_quality.py
 ```
 
-**Expected output**:
-```
-✓ Passed: 25
-✗ Failed: 0
-⚠ Warnings: 0
-📊 Success Rate: 100.0%
-✅ ALL TESTS PASSED
-```
-
 ---
 
 ## 🌊 Undercurrents of Data Engineering
@@ -1160,7 +1151,7 @@ sslmode='require'
 
 ---
 
-## 📊 Project Statistics
+##  Project Statistics
 
 | Metric | Value |
 |--------|-------|
@@ -1203,11 +1194,11 @@ sslmode='require'
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 - [ ] Real-time streaming with Kafka
 - [ ] Machine learning models (churn prediction)
-- [x] **Interactive web dashboard** (Streamlit) ✅
+- [x] **Interactive web dashboard** (Streamlit) 
 - [ ] Data lineage tracking with Great Expectations
 - [ ] Multi-region deployment (US East + South America)
 - [ ] dbt for transformation layer
@@ -1216,10 +1207,6 @@ sslmode='require'
 - [ ] Mobile app for dashboard access
 
 ---
-
-##  License
-
-MIT License - See [LICENSE](LICENSE) file
 
 ---
 
@@ -1230,12 +1217,4 @@ MIT License - See [LICENSE](LICENSE) file
 - **Duke University**: IDS 706 course
 - **Professor**: For guidance and feedback
 
----
-
-## 📞 Contact
-
-For questions or collaboration:
-
-- **GitHub**: [PinakiG-duke](https://github.com/PinakiG-duke)
-- **Email**: pg163@duke.edu
-
+-
