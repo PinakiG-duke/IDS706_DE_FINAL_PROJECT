@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Streamlit App](https://img.shields.io/badge/Streamlit-Live_Dashboard-FF4B4B?logo=streamlit)](https://dataplumbers.streamlit.app)
 
-🌐 **[Live Dashboard](https://dataplumbers.streamlit.app)** - Interactive analytics and visualizations
+ **[Live Dashboard](https://dataplumbers.streamlit.app)** - Interactive analytics and visualizations
 
 ---
 
