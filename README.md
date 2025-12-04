@@ -1,4 +1,4 @@
-# 🏗️ Olist E-Commerce Data Engineering Project
+# Olist E-Commerce Data Engineering Project
 
 **Duke IDS 706 - Data Engineering Final Project**
 
@@ -50,7 +50,7 @@ This pipeline enables:
 
 ---
 
-## 👥 Team Members & Roles
+## Team Members & Roles
 
 | Name | Role | Responsibilities |
 |------|------|-----------------|
@@ -320,7 +320,7 @@ LOAD_ORDER = [
 
 ---
 
-## 🔧 Pipeline Components
+## Pipeline Components
 
 ### 1. Data Ingestion
 
@@ -538,7 +538,7 @@ docker-compose down
 
 **Quick Start**:
 
-🌐 **Live Dashboard**: [https://dataplumbers.streamlit.app](https://dataplumbers.streamlit.app)
+ **Live Dashboard**: [https://dataplumbers.streamlit.app](https://dataplumbers.streamlit.app)
 
 **Local Development**:
 ```bash
@@ -860,7 +860,7 @@ python tests/test_data_quality.py
 
 ---
 
-## 🌊 Undercurrents of Data Engineering
+## Undercurrents of Data Engineering
 
 ### 1. Scalability
 
@@ -1168,7 +1168,7 @@ sslmode='require'
 
 ---
 
-## 📈 Results & Insights
+## Results & Insights
 
 ### Key Findings
 
